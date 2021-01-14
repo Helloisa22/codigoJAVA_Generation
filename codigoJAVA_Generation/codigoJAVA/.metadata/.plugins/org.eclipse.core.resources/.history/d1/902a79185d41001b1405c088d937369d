@@ -1,0 +1,21 @@
+package lojaNova;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class testeLoja {
+	
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+		
+		//cliente fregues = new cliente("Joao", );
+		
+		//usar uma interface
+		List<Produto> prodlista = new ArrayList<>();
+		
+		prodlista.add(new Produto("CAMISA POLO","BEST-001",50.25));
+		prodlista.add(new Produto("CALÇA JEAN","BEST-002",80.00));
+		prodlista.add(new Produto("CAMISETA","BEST-003",20.00));
+	}
+}

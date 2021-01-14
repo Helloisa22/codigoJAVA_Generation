@@ -1,0 +1,20 @@
+package AtividadeClasseObjeto;
+
+public class Cliente {
+	
+	String nome;
+	int cpf;
+	int tamanho;
+	
+	
+	public Cliente(String nome, int cpf) {
+		
+		this.nome = nome;
+		this.cpf = cpf;
+	}
+	
+	public Cliente(int tamanho) {
+		
+		this.tamanho = tamanho;
+	}
+}

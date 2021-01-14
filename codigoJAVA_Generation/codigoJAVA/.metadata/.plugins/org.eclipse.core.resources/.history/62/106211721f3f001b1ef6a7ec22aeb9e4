@@ -1,0 +1,64 @@
+package AtividadeClasseObjeto;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Cliente room = new Cliente();
+		Aviao airplane = new Aviao();
+		Eletronico eletric = new Eletronico();
+		Funcionario employee = new Funcionario();
+		Patinete Scooter = new Patinete();
+		ContaBancaria Bank = new ContaBancaria();
+		Paciente Patient = new Paciente();
+		
+		room.nome = "Ana";
+		room.cpf = "005.006.007.06";
+		room.tamanho = 23;
+		
+		System.out.printf("O nome do cliente é %s\t o CPF é: %s O tamanho é: %d.\n ", room.nome, room.cpf, room.tamanho);
+		
+		
+		airplane.valor = 1300;
+		airplane.nomeAviao = "Boeing";
+		airplane.numero = 787;
+		airplane.aviacao = "Viação Garcia";
+		
+		System.out.printf("O avião %s, n° %d, tem valor de %f, pertence a %s \n", airplane.nomeAviao, airplane.numero, airplane.valor, airplane.aviacao);
+		
+		
+		eletric.caracteristica = "Sistema Operacional. Android iOS 9";
+		eletric.nome = "LG G5";
+		eletric.quantidade = 10;
+		eletric.valor = 1200;
+		
+		System.out.printf("Celular %s, com %s, valor %f, contém %d unidade.",eletric.nome, eletric.caracteristica, eletric.valor, eletric.quantidade);
+		
+		
+		employee.cargo = "Analista";
+		employee.horasTrabalhadas = 29 ;
+		employee.nome = "Antonio";
+		employee.salario = 2000;
+		
+		System.out.printf("Empresa TOTVS funcionário %s, cargo de %s, teve %d horas trabalhadas, com salario de %f",employee.nome, employee.cargo, employee.horasTrabalhadas, employee.salario);
+		
+		
+		Bank.nome = "Raul";
+		Bank.cpf = "006.007.008.008";
+		Bank.numeroConta = 004;
+		Bank.tipoConta = "Corrente";
+		Bank.valorEmConta = 200;
+		
+		System.out.println("");
+		
+		
+		Patient.ala = "UTI";
+		Patient.doenca = "Peneumonia";
+		Patient.nome = "Patrick";
+		Patient.numero = 057;
+		Patient.situacao = "Estável";
+		
+		System.out.println("");
+	}
+
+}

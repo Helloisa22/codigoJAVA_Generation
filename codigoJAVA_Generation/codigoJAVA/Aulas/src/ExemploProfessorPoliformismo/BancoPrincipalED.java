@@ -1,0 +1,91 @@
+package ExemploProfessorPoliformismo;
+import java.util.Scanner;
+
+public class BancoPrincipalED {
+	public static void main(String[] args)
+	{
+		Scanner leia = new Scanner(System.in);
+		
+		char op;//visivel em todo o programa - escopo
+		char saida;
+		int numeroConta=0; //escopo global
+		
+		System.out.println("BANCO DO ED!!!");
+		do
+		{
+			System.out.println("1 - Abertura de conta: ");
+			System.out.println("2 - Acesso a uma conta existente: ");
+			System.out.println("3 - Sair: ");
+			op = leia.next().charAt(0);
+			if (op == '1')
+			{
+				System.out.println("1 - Conta Poupança");
+				System.out.println("2 - Conta Corrente");
+				System.out.println("3 - Conta Especial");
+				System.out.println("4 - Conta Empresa");
+				System.out.println("5 - conta Universitaria");
+				System.out.print("Digite o numero de sua opção: ");
+				char opconta = leia.next().charAt(0);
+				numeroConta++;
+				System.out.println("Digite o seu CPF:");
+				String cpfConta = leia.next();
+				switch (opconta)
+				{
+					case '1':
+					{
+						System.out.println("Digite a data de aniversario da conta: ");
+						int dataAniversario = leia.nextInt();
+						ContaPoupançaED poupanca = new ContaPoupançaED(numeroConta,cpfConta,dataAniversario);
+					}
+					break;
+					
+					case '2':
+					{
+						System.out.println("Digite o numero do talao de cheque: ");
+						int setNumeroTalaoCheque = leia.nextInt();
+						ContaCorrenteED corrente = new ContaCorrenteED(23, cpfConta);
+					}
+					break;
+				
+					case '3':
+					{
+						System.out.println("O valor limite é: ");
+						double valorLimite = 300;
+						contaEspecialED especial = new contaEspecialED(numeroConta, valorLimite);
+					}
+					break;
+					
+					case '4':
+					{
+						System.out.println("O valor limite é: ");
+						double emprestimoEmpresa = 1000;
+						ContaEmpresaED empresa = new ContaEmpresaED(numeroConta, cpfConta, emprestimoEmpresa );
+					}
+					
+					case '5':
+					{
+						System.out.println("O valor limite é: ");
+						double valorLimite = 1000;
+						double emprestimoUniversitario = 200;
+						contaUniversitariaED universitaria = new contaUniversitariaED(numeroConta, valorLimite, emprestimoUniversitario);
+					}
+				}
+			}
+			else if (op == '2')
+			{
+				System.out.println("wip");
+			}
+			else
+			{
+				
+			}
+			System.out.println("Continua S/N");
+			saida = leia.next().toUpperCase().charAt(0);
+			if (saida == 'N') {
+				break;
+			}
+		
+		} while(true);
+				
+	}
+}

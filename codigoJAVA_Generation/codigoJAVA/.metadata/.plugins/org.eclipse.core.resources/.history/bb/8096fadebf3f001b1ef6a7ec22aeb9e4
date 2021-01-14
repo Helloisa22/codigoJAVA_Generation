@@ -1,0 +1,10 @@
+package Herança_Encapsulamento;
+
+
+public class TestePessoa {
+	
+	Pessoa people = new Pessoa("João","Rua são Mariano","40028922",'M', 18);
+	
+	System.out.printf("");
+		
+}

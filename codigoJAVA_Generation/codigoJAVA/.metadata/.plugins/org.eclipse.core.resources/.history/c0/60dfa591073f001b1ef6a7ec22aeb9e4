@@ -1,0 +1,22 @@
+package AtividadeClasseObjeto;
+
+public class Eletronico {
+	
+	String nome;
+	double valor;
+	String caracteristica;
+	int quantidade;
+	
+	public Eletronico() {
+		
+	}
+	
+	public Eletronico(String nome, double valor, String caracteristica, int quantidade) {
+		this.nome = nome;
+		this.valor = valor;
+		this.caracteristica = caracteristica;
+		this.quantidade = quantidade;
+	}
+	
+	
+}

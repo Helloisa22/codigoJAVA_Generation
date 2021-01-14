@@ -1,0 +1,10 @@
+package ExemplosEmSala;
+
+public class testeFunc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

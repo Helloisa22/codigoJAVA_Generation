@@ -1,0 +1,12 @@
+package lojaNova;
+
+import java.util.Scanner;
+
+public class testeLoja {
+	
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+		
+		//cliente fregues = new cliente("Joao", );
+	}
+}

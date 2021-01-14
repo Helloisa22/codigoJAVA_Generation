@@ -1,0 +1,24 @@
+package lojaNova;
+
+public class cliente extends pessoa {
+	String cpf;
+	
+	/*public cliente(String cpf) {
+		this.cpf = cpf;
+	}*/
+
+	public cliente(String nome, char genero, int anoNascimento, String cpf) {
+		super(nome, genero, anoNascimento);
+		this.cpf = cpf;
+	}
+	
+
+	public String getcpf() {
+		return cpf;
+	}
+	
+	public String corrigeCPF(String novoCPF, String cpf) {
+		return novoCPF;
+	}
+	
+}

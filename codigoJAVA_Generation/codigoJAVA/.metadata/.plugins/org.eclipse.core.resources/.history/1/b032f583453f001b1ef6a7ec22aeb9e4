@@ -1,0 +1,12 @@
+package Herança_Encapsulamento;
+
+public class Pessoa {
+	
+	String nome; 
+	String endereço; 
+	String telefone;
+	char sexo;
+	int idade;
+	
+	
+}

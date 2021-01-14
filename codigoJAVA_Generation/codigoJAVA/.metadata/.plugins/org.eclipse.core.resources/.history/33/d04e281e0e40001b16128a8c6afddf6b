@@ -1,0 +1,11 @@
+package ExercíciosHerançaPolimorfismo;
+
+public class Animal {
+	
+	private String nome;
+	private int idade;
+	private String emitirSom;
+	private boolean corre;
+	
+	
+}

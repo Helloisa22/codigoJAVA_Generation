@@ -1,0 +1,6 @@
+package ExercíciosHerançaPolimorfismo;
+
+public class Cachorro extends Animal {
+	
+	
+}

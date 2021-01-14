@@ -1,0 +1,54 @@
+package lojaNova;
+
+public class Produto {
+	
+	String nomeProduto;
+	String codigoProduto;
+	double precoUnitario;
+	int qtdeProdutoEstoque;
+	
+	//CONSTRUTOR
+	public Produto(String nomeProduto, String codigoProduto, double precoUnitario) {
+		this.nomeProduto = nomeProduto;
+		this.codigoProduto = codigoProduto;
+		this.precoUnitario = precoUnitario;
+	}
+	
+	//ENCAPSULAMENTO
+	public String getNomeProduto() {
+		return nomeProduto;
+	}
+	public void setNomeProduto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
+	}
+	public String getcodigoProduto() {
+		return codigoProduto;
+	}
+	public void setcodigoProduto(String codigoProduto) {
+		this.codigoProduto = codigoProduto;
+	}
+	public double getPrecoUnitario() {
+		return precoUnitario;
+	}
+	public void setPrecoUnitario(double precoUnitario) {
+		this.precoUnitario = precoUnitario;
+	}
+	public int getQtdeProdutoEstoque() {
+		return qtdeProdutoEstoque;
+	}
+	
+	//METODO
+	 public void tiraEstoque(int qtdeProdutoEstoque, int saida) {
+		 saida = this.qtdeProdutoEstoque - this.qtdeProdutoEstoque;
+	 }
+	 
+	 public void adicionaEstoque(int entrada) {
+		 entrada = this.qtdeProdutoEstoque + this.qtdeProdutoEstoque;
+	 }
+	 
+	 public double venda(int qtdeVendida) {
+		 
+	 }
+}
+
+

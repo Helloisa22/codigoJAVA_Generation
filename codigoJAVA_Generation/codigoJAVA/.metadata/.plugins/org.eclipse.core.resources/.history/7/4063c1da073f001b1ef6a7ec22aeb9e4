@@ -1,0 +1,26 @@
+package AtividadeClasseObjeto;
+//CLASSE
+public class Aviao {
+	
+	//ATRIBUTOS
+	int numero;
+	String nomeAviao;
+	double valor;
+	String aviacao;
+	
+	//METODOS
+	public Aviao() {
+		
+	}
+	
+	public Aviao(int numero, String nomeAviao, double valor) {
+		
+		this.numero = numero;
+		this.nomeAviao = nomeAviao;
+		this.valor = valor;
+	}
+	
+	public Aviao(String aviacao) {
+		this.aviacao = aviacao;
+	}
+}

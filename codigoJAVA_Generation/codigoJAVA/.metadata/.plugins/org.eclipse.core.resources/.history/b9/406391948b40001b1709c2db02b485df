@@ -1,0 +1,6 @@
+package lojaNova;
+
+public class cliente extends pessoa {
+	
+	
+}

@@ -1,0 +1,6 @@
+package Herança_Encapsulamento;
+
+public class Fornecedor extends Pessoa {
+	
+	
+}

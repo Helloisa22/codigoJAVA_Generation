@@ -1,0 +1,10 @@
+package lojaNova;
+
+public class cliente extends pessoa {
+
+	public cliente(String nome, char genero, int anoNascimento) {
+		super(nome, genero, anoNascimento);
+	}
+	
+	
+}

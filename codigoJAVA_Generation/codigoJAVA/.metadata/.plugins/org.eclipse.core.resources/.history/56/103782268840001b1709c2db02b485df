@@ -1,0 +1,8 @@
+package lojaNova;
+
+public abstract class pessoa {
+	
+	String nome;
+	char genero;
+	int anoNascimento;
+}

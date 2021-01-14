@@ -1,0 +1,25 @@
+package AtividadeClasseObjeto;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Cliente room = new Cliente();
+		Aviao airplane = new Aviao();
+		
+		room.nome = "Ana";
+		room.cpf = "005.006.007.06";
+		room.tamanho = 23;
+		
+		System.out.printf("O nome do cliente é %s\t o CPF é: %s\t O tamanho é: %d.\n ", room.nome, room.cpf, room.tamanho);
+		
+		
+		airplane.valor = 1300;
+		airplane.nomeAviao = "Boeing";
+		airplane.numero = 787;
+		airplane.aviacao = "Viação Garcia";
+		
+		System.out.printf("O avião %s, n° %d, tem valor de %d, pertence a aviação %s \n", airplane.nomeAviao, airplane.numero, airplane.valor, airplane.aviacao);
+	}
+
+}

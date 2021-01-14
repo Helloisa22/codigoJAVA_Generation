@@ -1,0 +1,12 @@
+package Herança_Encapsulamento;
+
+public class TestePessoa {
+
+	public static void main(String[] args) {
+		Pessoa people = new Pessoa("João","Rua são Mariano","40028922",'M', 18);
+		
+		
+
+	}
+
+}

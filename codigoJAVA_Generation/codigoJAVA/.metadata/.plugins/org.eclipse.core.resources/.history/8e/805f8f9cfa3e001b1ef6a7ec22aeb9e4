@@ -1,0 +1,14 @@
+package AtividadeClasseObjeto;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Cliente room = new Cliente();
+		
+		room.nome = "Ana";
+		room.cpf = "005.006.007.06";
+		System.out.printf("O nome do cliente é %s\t o CPF é:%s\t O tamanho é: %d: ", room.nome, room.cpf, room.tamanho);
+	}
+
+}

@@ -1,0 +1,202 @@
+package loja;
+
+import java.util.Scanner;
+
+public class CadLoja {
+	public static void main(String[] args) {
+		
+		Scanner leia = new Scanner(System.in);
+		String codigos[] = new String[10];
+		String produtos[] = {"pacote push pop","pacote balas caramelizadas","pacote tortilhas doces","pacote tortilhas salgadas",
+				"pacote balas amargas","pacote balas de coco","pacote pão de mel","pacote bala caramelo","pacote baton maluco",
+				"pacote moedas de chocolate"};
+		double precoUnitarios[] = {10,15,20,10,12,17,25,20,10,15}, total = 0.0;
+		int estoqueProdutos[] = new int[] { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 };
+		int estoque[] = new int[10], carrinho[] = new int[10];
+		int escolhido = 0;
+		String escolha;
+		int sacola[] = new int[4];
+		
+		int tamanho = 80; char opcao; String nomeCliente ="";
+		
+		
+		do
+		{
+			
+			linha(tamanho);
+			System.out.println("\n═                           Sugary Sweets                                      ═");
+			System.out.println("═                       Sua vontade na palma da mão!                           ═");
+			linha(tamanho);
+		
+		
+			System.out.println("\n[1] - COMPRAR PRODUTOS");
+			System.out.println("[2] - GERENCIAR ESTOQUE");
+			System.out.println("[3] - SAIR");
+			System.out.print("Digite sua oção de escolha: ");
+			opcao = leia.next().charAt(0);
+			
+			if(opcao == '1') {
+				
+				System.out.print("Por favor informe o seu nome: ");
+				nomeCliente = leia.next().toUpperCase();
+				System.out.print("Digite M-Masculino ou F-Feminino: ");
+				char sexo = leia.next().toUpperCase().charAt(0);
+				System.out.println(genero(sexo,nomeCliente));
+
+				System.out.println("CODIGO\t\tR$(UN)\t\tESTOQUE\t\tPRODUTO");
+				linha(tamanho);
+				pula();
+				//TRAZ A LISTA DE PRODUTOS, COM CODIGO PRECO ESTOQUE E TIPO
+				for (int x=0; x<10; x++)
+				{
+					estoque[x]=10;
+					codigos[x]=(x<9)?"HC-00"+(x+1):"HC-0"+(x+1);
+					System.out.printf("%s\t\t%.2f\t\t%d\t\t%s\n",codigos[x],precoUnitarios[x],estoque[x],produtos[x]);
+											
+				}
+				linha(tamanho);
+				pula();
+				
+				adicionarCarrinho(codigos, estoqueProdutos, produtos, precoUnitarios, carrinho);
+				carrinhoCompras(estoqueProdutos, produtos, precoUnitarios, total, carrinho);
+				
+				
+				//SELECIONA O PRODUTO PELO CODIGO
+				/*System.out.println("Selecione pelo codigo um produto: ");
+				escolha = leia.next().toUpperCase();
+				for (int x=0; x<10; x++)
+				{
+					if (codigos[x].equals(escolha))
+					{
+						escolhido = x++;
+						System.out.println("Escolhdo foi "+x);
+					}
+					
+				}
+				System.out.println("Produto escolhido: "+produtos[escolhido]);
+				
+				//ADICIONAR PRODUTOS SELECIONADOS NA SACOLA
+				for (int x=0; x<4;x++) {
+					if() {
+						
+					}
+				}*/
+				
+				
+				
+				
+			}else if(opcao == '2') {
+				System.out.println("WIP");
+			}else if(opcao == '3') {
+				System.out.println("Volte sempre! ");
+				opcao = 'P';
+			}
+			
+		while (true)
+			
+		{
+			if (opcao != 'C' && opcao !='P')
+			{
+				System.out.println("\nPor favor digite C-Continuar ou P-Parar tá bom. Tente de novo: ");
+				opcao = leia.next().toUpperCase().charAt(0);
+			} else 
+			{
+				break;
+			}
+			
+		}
+	} while (opcao == 'C');
+	}
+		
+	
+	//FUNCAO
+	static void linha(int tamanho) {
+		for(int x =0; x<tamanho; x++) {
+			System.out.print("═");
+		}
+	}
+	
+	
+	static void pula() {
+		System.out.print("\n");
+	}
+	
+	//FUNCAO
+	public static String genero(char sexo, String nomeCliente) {
+		 String generoCliente = "";
+		
+		if(sexo == 'F') {
+			
+			generoCliente = "Seja bem vinda " + nomeCliente + "!!\n";
+			
+		}else if (sexo == 'M')
+		{
+			generoCliente = "Seja bem vindo " + nomeCliente + "!!\n";
+			
+		}
+		else
+		{
+			generoCliente = "Seja bem vind* " + nomeCliente + "!!\n";
+		}
+		return generoCliente;
+	}
+	
+	
+	static void adicionarCarrinho(String codigos[], int estoqueProdutos[], String produtos[], double precoUnitarios[], int carrinho[]) {
+		char continuar;
+		int cod, quantidade;
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < 10; i++) {
+			carrinho[i] = 0;
+		}
+		do {
+			System.out.print("Digite o código do produto desejado.\nHC-0");
+			cod = sc.nextInt();
+			if (cod >= 1 && cod <= 10) {
+				System.out.println("Digite quantas unidades quer comprar: ");
+				quantidade = sc.nextInt();
+				if (estoqueProdutos[cod - 1] >= quantidade) {
+					estoqueProdutos[cod - 1] -= quantidade;
+					carrinho[cod - 1] += quantidade;
+				} else if (estoqueProdutos[cod - 1] == 0) {
+					System.out.println("Não temos mais este produto. Desculpe o incoveniente.");
+				} else {
+					System.out.println("Não temos essa quantidade para esse produto! Temos apenas "
+							+ estoqueProdutos[cod - 1] + " unidades.");
+					do {
+						System.out.println("Você gostaria de levar apenas essa quantidade (S ou N)?");
+						continuar = sc.next().toUpperCase().charAt(0);
+					} while ((continuar != 'S') && (continuar != 'N'));
+					if (continuar == 'S') {
+						carrinho[cod - 1] += estoqueProdutos[cod - 1];
+						estoqueProdutos[cod - 1] -= estoqueProdutos[cod - 1];
+					}
+				}
+			}
+			do {
+				System.out.println("Você gostaria de comprar outro produto (S ou N)?");
+				continuar = sc.next().toUpperCase().charAt(0);
+			} while ((continuar != 'S') && (continuar != 'N'));
+		} while (continuar == 'S');
+		sc.close();
+	}
+	
+	
+	static void carrinhoCompras(int estoqueProdutos[], String nomeProdutos[], double precoProdutos[], double total,
+			int carrinho[]) {
+		System.out.println("\nCarrinho de compras");
+		linha(80);
+		System.out.println();
+		System.out.println("QTD.\t\tPREÇO UN.\tPREÇO TOTAL\tNOME DO PRODUTO");
+		linha(80);
+		System.out.println();
+		for (int i = 0; i < 10; i++) {
+			if (carrinho[i] != 0) {
+				System.out.printf("%d\t\t%.2f\t\t%.2f\t\t%s\n", carrinho[i], precoProdutos[i],(carrinho[i] * precoProdutos[i]), nomeProdutos[i]);
+				total += carrinho[i] * precoProdutos[i];
+			}
+		}
+		linha(80);
+		System.out.println("\n\nPreço total: " + total);
+	}
+}

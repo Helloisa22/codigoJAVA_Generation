@@ -1,0 +1,32 @@
+package AtividadeClasseObjeto;
+
+	/*
+	 *  5) Crie uma classe patinete e apresente os atributos
+	 *     e métodos referentes esta classe, em seguida crie um
+	 *     objeto patinete, defina as instancias deste objeto e
+	 *     apresente as informações deste objeto no console. 
+	 */
+
+public class Patinete {
+	
+	String nome;
+	double valor;
+	int rodas;
+	String cor;
+	int quantidade;
+	char tamanho;
+	
+	
+	public Patinete() {
+		
+	}
+	
+	public Patinete(String nome, double valor, int rodas, String cor, int quantidade, char tamanho) {
+		this.nome = nome;
+		this.valor = valor;
+		this.rodas = rodas;
+		this.cor = cor;
+		this.quantidade = quantidade;
+		this.tamanho = tamanho;
+	}
+}

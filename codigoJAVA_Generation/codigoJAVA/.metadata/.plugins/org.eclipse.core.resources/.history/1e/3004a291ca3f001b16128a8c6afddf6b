@@ -1,0 +1,14 @@
+package Herança_Encapsulamento;
+
+public class Empregado extends Pessoa{
+	private int codigoSetor;
+	private double salarioBase;
+	private double imposto;
+
+	public Empregado(String nome, String endereco, String telefone, char sexo, int idade) {
+		super(nome, endereco, telefone, sexo, idade);
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package Herança_Encapsulamento;
+
+public class Fornecedor extends Pessoa {
+
+	private  double valorCredito;
+	private double valorDivida;
+	
+	public Fornecedor(String nome, String endereco, String telefone, char sexo, int idade) {
+		super(nome, endereco, telefone, sexo, idade);
+		
+	}
+	
+	
+}

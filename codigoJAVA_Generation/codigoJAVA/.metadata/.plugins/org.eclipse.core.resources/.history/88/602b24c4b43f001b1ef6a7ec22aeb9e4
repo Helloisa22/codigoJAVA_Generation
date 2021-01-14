@@ -1,0 +1,12 @@
+package ExemplosEmSala;
+
+public class Terceiro extends Funcionario{
+	
+	public Terceiro(String nome, int horasMensais, double valorHora) {
+		super(nome, horasMensais, valorHora);
+	}
+
+	double valorTerceiro;
+	
+	
+}

@@ -1,0 +1,6 @@
+package Herança_Encapsulamento;
+
+public class TestePessoa {
+	
+	Pessoa people = new Pessoa();
+}
